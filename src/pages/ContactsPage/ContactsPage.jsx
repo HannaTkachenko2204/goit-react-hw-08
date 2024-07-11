@@ -8,20 +8,20 @@ import PageTitle from "../../components/PageTitle";
 import { selectLoading } from "../../redux/contacts/selectors";
 
 export default function ContactsPage() {
-    const dispatch = useDispatch();
-    const isLoading = useSelector(selectLoading);
-  
-    useEffect(() => {
-      dispatch(fetchContacts());
-    }, [dispatch]);
-  
-    return (
-      <>
-        <PageTitle>Phonebook</PageTitle>
-        <ContactForm />
-        <SearchBox />
-        {isLoading && 'Request in progress...'}
-        <ContactList />
-      </>
-    );
-  }
+  const dispatch = useDispatch();
+  const isLoading = useSelector(selectLoading);
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
+
+  return (
+    <>
+      <PageTitle>Phonebook</PageTitle>
+      <ContactForm />
+      <SearchBox />
+      {isLoading && "Request in progress..."}
+      <ContactList />
+    </>
+  );
+}

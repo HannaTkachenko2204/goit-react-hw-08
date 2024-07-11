@@ -8,14 +8,11 @@ const UserMenu = () => {
   return (
     <>
       <h2>Welcome, {user.name}!</h2>
-      <button
-        type="button"
-        onClick={() => dispatch(logOut())}
-      >
+      <button type="button" onClick={() => dispatch(logOut())}>
         Logout
       </button>
     </>
-  )
-}
+  );
+};
 
-export default UserMenu
+export default UserMenu;

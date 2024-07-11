@@ -1,38 +1,49 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useDispatch } from "react-redux";
-import { logIn } from "../../redux/auth/operations";
 import * as Yup from "yup";
+import { register } from "../../redux/auth/operations";
 
-const validationShema = Yup.object().shape({
-  name: Yup.string().trim().required("Field must be filled in"),
+const validationSchema = Yup.object().shape({
+  name: Yup.string().trim().required("Name is required"),
   email: Yup.string()
     .trim()
-    .required("Field must be filled in")
+    .required("Email is required")
     .matches(
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
       "Invalid email."
     ),
-  password: Yup.string().trim().min(8).required("Field must be filled in"),
+  password: Yup.string().trim().min(8).required("Password is required"),
 });
 
-export default function LoginForm() {
+export default function RegistrationForm() {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, action) => {
-    dispatch(logIn(values));
+    dispatch(register(values));
     action.resetForm();
   };
 
   return (
     <Formik
       initialValues={{
+        name: "",
         email: "",
         password: "",
       }}
-      validationSchema={validationShema}
+      validationSchema={validationSchema}
       onSubmit={handleSubmit}
     >
       <Form autoComplete="off">
+        <label>
+          Username
+          <Field
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            autoComplete="off"
+          />
+          <ErrorMessage name="name" component="span" />
+        </label>
         <label>
           Email
           <Field
@@ -53,7 +64,7 @@ export default function LoginForm() {
           />
           <ErrorMessage name="password" component="span" />
         </label>
-        <button type="submit">Log In</button>
+        <button type="submit">Register</button>
       </Form>
     </Formik>
   );

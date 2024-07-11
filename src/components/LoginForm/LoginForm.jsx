@@ -14,7 +14,7 @@ const validationSchema = Yup.object().shape({
   password: Yup.string().trim().min(6).required("Field must be filled in"),
 });
 
-export default function LoginForm() {
+function LoginForm() {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, action) => {
@@ -57,3 +57,5 @@ export default function LoginForm() {
     </Formik>
   );
 }
+
+export default LoginForm

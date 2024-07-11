@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import PageTitle from "../../components/PageTitle/PageTitle";
+import PageTitle from "../../components/PageTitle";
 import { Link } from "react-router-dom";
 import { selectIsLoggedIn } from "../../redux/auth/selectors";
 

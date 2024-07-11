@@ -1,6 +1,7 @@
 // import { createAsyncThunk } from "@reduxjs/toolkit";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 axios.defaults.baseURL = "https://connections-api.goit.global";
 
@@ -49,3 +50,22 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
     }
 });
 
+export const refreshUser = createAsyncThunk(
+    'auth/refresh',
+    async (_, thunkAPI) => {
+        const state = thunkAPI.getState();
+        const persistedToken = state.auth.token;
+
+        if (persistedToken === null) {
+            return thunkAPI.rejectWithValue('Token not found');
+        }
+        token.setAuth(persistedToken);
+        try {
+            const { data } = await axios.get('/users/current');
+            return data;
+        } catch (error) {
+            toast.error('User is not found!');
+            return thunkAPI.rejectWithValue(error.code);
+        }
+    }
+);

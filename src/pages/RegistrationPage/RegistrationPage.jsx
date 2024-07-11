@@ -1,4 +1,4 @@
-import PageTitle from "../../components/PageTitle/PageTitle";
+import PageTitle from "../../components/PageTitle";
 import RegistrationForm from "../../components/RegistrationForm/RegistrationForm";
 
 export default function RegistrationPage() {

@@ -15,7 +15,7 @@ const validationSchema = Yup.object().shape({
   password: Yup.string().trim().min(8).required("Password is required"),
 });
 
-export default function RegistrationForm() {
+function RegistrationForm() {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, action) => {
@@ -69,3 +69,5 @@ export default function RegistrationForm() {
     </Formik>
   );
 }
+
+export default RegistrationForm

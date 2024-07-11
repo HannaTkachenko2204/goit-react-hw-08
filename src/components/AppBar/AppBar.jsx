@@ -7,7 +7,7 @@ import Navigation from "../Navigation/Navigation";
 import UserMenu from "../UserMenu/UserMenu";
 import AuthNav from "../AuthNav/AuthNav";
 
-export default function AppBar() {
+function AppBar() {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const isRefreshing = useSelector(selectIsRefreshing);
   return (
@@ -17,3 +17,5 @@ export default function AppBar() {
     </header>
   );
 }
+
+export default AppBar

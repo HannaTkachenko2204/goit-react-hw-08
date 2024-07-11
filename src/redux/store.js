@@ -1,19 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import rootReducer from "./rootReducer";
-import storage from "redux-persist/lib/storage";
-import persistReducer from "redux-persist/es/persistReducer";
 import persistStore from "redux-persist/es/persistStore";
-
-const persistConfig = {
-  key: "auth",
-  storage,
-  whitelist: ["token"],
-};
-
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+import rootReducer from "./rootReducer.js";
 
 export const store = configureStore({
-  reducer: persistedReducer,
+  reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {

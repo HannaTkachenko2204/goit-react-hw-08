@@ -1,15 +1,13 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
 import toast from "react-hot-toast";
-
-axios.defaults.baseURL = "https://connections-api.goit.global";
+import axiosInstance from "../api";
 
 const token = {
   setAuth(token) {
-    axios.defaults.headers.common.Authorization = `Bearer ${token}`;
+    axiosInstance.defaults.headers.common.Authorization = `Bearer ${token}`;
   },
   clearAuth() {
-    axios.defaults.headers.common.Authorization = "";
+    axiosInstance.defaults.headers.common.Authorization = "";
   },
 };
 
@@ -17,7 +15,7 @@ export const register = createAsyncThunk(
   "auth/register",
   async ({ name, email, password }, thunkAPI) => {
     try {
-      const { data } = await axios.post("/users/signup", {
+      const { data } = await axiosInstance.post("/users/signup", {
         name,
         email,
         password,
@@ -34,7 +32,7 @@ export const logIn = createAsyncThunk(
   "auth/login",
   async (userInfo, thunkAPI) => {
     try {
-      const { data } = await axios.post("/users/login", userInfo);
+      const { data } = await axiosInstance.post("/users/login", userInfo);
       token.setAuth(data.token);
       return data;
     } catch (error) {
@@ -45,7 +43,7 @@ export const logIn = createAsyncThunk(
 
 export const logOut = createAsyncThunk("auth/logout", async (_, thunkAPI) => {
   try {
-    await axios.post("/users/logout");
+    await axiosInstance.post("/users/logout");
     token.clearAuth();
     return;
   } catch (error) {
@@ -64,7 +62,7 @@ export const refreshUser = createAsyncThunk(
     }
     token.setAuth(persistedToken);
     try {
-      const { data } = await axios.get("/users/current");
+      const { data } = await axiosInstance.get("/users/current");
       return data;
     } catch (error) {
       toast.error("User is not found!");

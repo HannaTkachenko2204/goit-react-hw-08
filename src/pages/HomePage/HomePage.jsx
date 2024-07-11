@@ -11,8 +11,7 @@ export default function HomePage() {
         <PageTitle>Your contacts</PageTitle>
       ) : (
         <>
-          <PageTitle>Please, to continue</PageTitle>
-          <Link to="/register">register</Link>
+          <PageTitle>Please, <Link to="/register">register</Link> to continue</PageTitle>
         </>
       )}
     </>

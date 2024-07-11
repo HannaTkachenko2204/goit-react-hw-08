@@ -1,4 +1,3 @@
-// import { createAsyncThunk } from "@reduxjs/toolkit";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -46,7 +45,7 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
         token.clearAuth();
         return;
     } catch (error) {
-        return thunkAPI.rejectWithValue(error.message);
+        return thunkAPI.rejectWithValue(error.response.data);
     }
 });
 

@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import { RestrictedRoute } from "./RestrictedRoute";
 import { PrivateRoute } from "./PrivateRoute";
 import Layout from "./Layout";
+import Loader from "./Loader/Loader";
 
 const HomePage = lazy(() => import("../pages/HomePage/HomePage"));
 const RegistrationPage = lazy(() =>
@@ -22,8 +23,10 @@ function App() {
     dispatch(refreshUser());
   }, [dispatch]);
 
+  console.log(isRefreshing);
+
   return isRefreshing ? (
-    <b>Refreshing user, please wait...</b>
+    <Loader />
   ) : (
     <Layout>
       <Suspense fallback={null}>

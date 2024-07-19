@@ -6,12 +6,12 @@ const UserMenu = () => {
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
   return (
-    <>
+    <div className="">
       <h2>Welcome, {user.name}!</h2>
       <button type="button" onClick={() => dispatch(logOut())}>
         Logout
       </button>
-    </>
+    </div>
   );
 };
 

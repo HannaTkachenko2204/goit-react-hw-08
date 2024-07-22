@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import { logIn } from "../../redux/auth/operations";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
+import css from "./LoginForm.module.css"
 
 const validationSchema = Yup.object().shape({
   email: Yup.string()
@@ -31,7 +32,7 @@ function LoginForm() {
       validationSchema={validationSchema}
       onSubmit={handleSubmit}
     >
-      <Form autoComplete="off">
+      <Form className={css.form_container} autoComplete="off">
         <label>
           Email
           <Field
@@ -40,7 +41,7 @@ function LoginForm() {
             placeholder="Enter your email"
             autoComplete="off"
           />
-          <ErrorMessage name="email" component="span" />
+          <ErrorMessage name="email" component="span" className={css.error} />
         </label>
         <label>
           Password
@@ -50,7 +51,7 @@ function LoginForm() {
             placeholder="Enter your password"
             autoComplete="off"
           />
-          <ErrorMessage name="password" component="span" />
+          <ErrorMessage name="password" component="span" className={css.error} />
         </label>
         <button type="submit">Log In</button>
       </Form>

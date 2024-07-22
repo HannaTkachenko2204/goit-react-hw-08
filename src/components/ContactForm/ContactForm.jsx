@@ -11,10 +11,10 @@ const validationShema = Yup.object().shape({
     .max(50, "Name should be no more than 50 symbols")
     .required("Field must be filled in"),
   number: Yup.string()
-    .matches(
-      /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/,
-      "Phone must be in format: XXX-XXX-XXXX"
-    )
+    // .matches(
+    //   /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/,
+    //   "Phone must be in format: XXX-XXX-XXXX"
+    // )
     .required("Field must be filled in"),
 });
 
@@ -32,14 +32,16 @@ const ContactForm = () => {
       onSubmit={handleSubmit}
       validationSchema={validationShema}
     >
-      <Form>
-        <p className={css.formNameOfInput}>Name</p>
+      <Form className={css.form_container}>
+        <label>Name
         <Field type="text" name="name" />
-        <ErrorMessage name="name" component="span" />
-        <p className={css.formNameOfInput}>Number</p>
+        <ErrorMessage name="name" component="span" className={css.error} />
+        </label>
+        <label>
+        Number
         <Field type="text" name="number" />
-        <ErrorMessage name="number" component="span" />
-        <br />
+        <ErrorMessage name="number" component="span" className={css.error} />
+        </label>
         <button type="submit" className={css.formButton}>
           Add contact
         </button>

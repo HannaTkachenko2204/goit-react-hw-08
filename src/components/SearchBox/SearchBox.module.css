@@ -1,4 +1,30 @@
-.nameOfInput{
-    margin-bottom: 0;
-    margin-top: 50px;
+.find_input {
+    max-width: 250px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ead0db;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.find_input label {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    color: #490537;
+}
+
+.find_input input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #e4b8cf;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.find_input input:focus {
+    border-color: #9e145b;
+    outline: none;
+    box-shadow: 0 0 5px #9e145b;
+  }

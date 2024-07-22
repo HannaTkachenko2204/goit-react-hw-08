@@ -11,10 +11,10 @@ const validationShema = Yup.object().shape({
     .max(50, "Name should be no more than 50 symbols")
     .required("Field must be filled in"),
   number: Yup.string()
-    // .matches(
-    //   /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/,
-    //   "Phone must be in format: XXX-XXX-XXXX"
-    // )
+    .matches(
+      /^\d+$/,
+      "Phone must be contain only numbers"
+    )
     .required("Field must be filled in"),
 });
 

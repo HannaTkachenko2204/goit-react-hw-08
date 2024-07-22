@@ -6,12 +6,13 @@ import {
 import Navigation from "../Navigation/Navigation";
 import UserMenu from "../UserMenu/UserMenu";
 import AuthNav from "../AuthNav/AuthNav";
+import css from "./AppBar.module.css"
 
 function AppBar() {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const isRefreshing = useSelector(selectIsRefreshing);
   return (
-    <header>
+    <header className={css.header}>
       <Navigation />
       {!isRefreshing && isLoggedIn ? <UserMenu /> : <AuthNav />}
     </header>

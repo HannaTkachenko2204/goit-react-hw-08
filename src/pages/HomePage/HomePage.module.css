@@ -1,5 +1,5 @@
 .home_page_img {
-    width: 600px;
+  width: 600px;
 }
 
 .home_page_title_link {
@@ -9,3 +9,30 @@
   margin: 0;
 }
 
+.cloud_container {
+  position: relative;
+  overflow: visible;
+}
+
+.cloud_text {
+  position: absolute;
+  top: 530px;
+  left: -110px;
+  color: rgb(169, 169, 26);
+  font-size: 70px;
+  font-weight: bold;
+  font-style: italic;
+  transform: rotate(-15deg);
+  transform-origin: top left;
+  z-index: 20;
+}
+
+.cloud_img {
+  position: absolute;
+  top: 440px;
+  left: -270px;
+  width: 600px;
+  transform: rotate(-5deg);
+  transform-origin: top left;
+  z-index: 10;
+}

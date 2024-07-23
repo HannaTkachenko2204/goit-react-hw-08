@@ -36,7 +36,7 @@ function App() {
               path="/register"
               element={
                 <RestrictedRoute
-                  redirectTo="/contacts"
+                  redirectTo="/"
                   component={<RegistrationPage />}
                 />
               }

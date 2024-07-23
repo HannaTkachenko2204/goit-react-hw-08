@@ -1,6 +1,13 @@
 .list {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 10px;
+  border: 1px solid #490537;
+}
+
+.list > li {
+  list-style: none;
+  width: 100%;
+  box-sizing: border-box;
+}

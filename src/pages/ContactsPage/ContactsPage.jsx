@@ -7,6 +7,7 @@ import ContactList from "../../components/ContactList/ContactList";
 // import PageTitle from "../../components/PageTitle/PageTitle";
 import { selectLoading } from "../../redux/contacts/selectors";
 import css from "./ContactsPage.module.css";
+import Loader from "../../components/Loader/Loader";
 
 export default function ContactsPage() {
   const dispatch = useDispatch();
@@ -23,7 +24,7 @@ export default function ContactsPage() {
       <ContactForm />
       <SearchBox />
       </div>
-      {isLoading && "Request in progress..."}
+      {isLoading && <Loader />}
       <ContactList />
     </>
   );

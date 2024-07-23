@@ -1,5 +1,5 @@
 .form_container {
-    max-width: 250px;
+    max-width: 240px;
     margin: 20px 0;
     padding: 20px;
     background-color: #ead0db;
@@ -8,7 +8,7 @@
   }
   
   .form_container label {
-    display: block;
+    width: 100%;
     margin-bottom: 15px;
     font-size: 1em;
     color: #490537;
@@ -33,6 +33,10 @@
     border-color: #9e145b;
     outline: none;
     box-shadow: 0 0 5px #9e145b;
+  }
+  
+  .form_container button {
+    margin-top: 20px;
   }
   
   .error {

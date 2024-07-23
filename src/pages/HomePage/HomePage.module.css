@@ -1,6 +1,11 @@
-.page_title_link {
-    line-height: 1.1;
-    text-align: center;
-    font-weight: bold;
-    margin: 0;
+.home_page_img {
+    width: 600px;
 }
+
+.home_page_title_link {
+  line-height: 1.1;
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+}
+

@@ -11,7 +11,7 @@ const validationSchema = Yup.object().shape({
     .required("Email is required")
     .matches(
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-      "Invalid email."
+      "Invalid email"
     ),
   password: Yup.string().trim().min(8).required("Password is required"),
 });

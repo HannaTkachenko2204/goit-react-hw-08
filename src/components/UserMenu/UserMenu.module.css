@@ -1,11 +1,15 @@
 .user_menu {
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
 }
 
 .user_menu h2 {
-    white-space: nowrap;
-    margin: 0;
-    font-style: italic;
-  }
+  white-space: nowrap;
+  margin: 0;
+  font-style: italic;
+}
+
+.user_menu button {
+  width: 80px;
+}

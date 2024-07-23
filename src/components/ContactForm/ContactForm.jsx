@@ -12,8 +12,8 @@ const validationShema = Yup.object().shape({
     .required("Field must be filled in"),
   number: Yup.string()
     .matches(
-      /^\d+$/,
-      "Phone must be contain only numbers"
+     /^[\d\-()]+$/,
+      "Phone must be contain only numbers, dashes, and parentheses"
     )
     .required("Field must be filled in"),
 });

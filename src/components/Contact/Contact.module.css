@@ -2,11 +2,20 @@
     display: flex;
     gap: 20px;
     align-items: center;
-    border: 1px solid black;
-    width: 300px;
-    justify-content: space-evenly;
+    width: 240px;
+    justify-content: space-between;
+    background-color: #ead0db;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #490537;
 }
 
 .icon {
     margin-right: 10px;
   }
+
+.item button {
+    width: 80px;
+}

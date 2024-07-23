@@ -1,12 +1,17 @@
 .home_page_img {
-  width: 600px;
+  width: 300px;
 }
 
-.home_page_title_link {
-  line-height: 1.1;
-  text-align: center;
-  font-weight: bold;
-  margin: 0;
+@media only screen and (min-width: 768px) {
+  .home_page_img {
+    width: 400px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .home_page_img {
+    width: 600px;
+  }
 }
 
 .cloud_container {
@@ -16,10 +21,10 @@
 
 .cloud_text {
   position: absolute;
-  top: 530px;
-  left: -110px;
+  top: 265px;
+  left: -25px;
   color: rgb(169, 169, 26);
-  font-size: 70px;
+  font-size: 35px;
   font-weight: bold;
   font-style: italic;
   transform: rotate(-15deg);
@@ -27,12 +32,51 @@
   z-index: 20;
 }
 
+@media only screen and (min-width: 768px) {
+  .cloud_text {
+    top: 350px;
+    left: -45px;
+    font-size: 50px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .cloud_text {
+    top: 580px;
+    left: -50px;
+    font-size: 70px;
+  }
+}
+
 .cloud_img {
   position: absolute;
-  top: 440px;
-  left: -270px;
-  width: 600px;
-  transform: rotate(-5deg);
+  top: 250px;
+  left: -95px;
+  width: 280px;
+  transform: rotate(-15deg);
   transform-origin: top left;
   z-index: 10;
+}
+
+@media only screen and (min-width: 768px) {
+  .cloud_img {
+    top: 330px;
+    left: -150px;
+    width: 400px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .cloud_img {
+    top: 550px;
+    left: -220px;
+    width: 600px;
+  }
+}
+
+.home_page_title_link {
+  line-height: 1.1;
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
 }

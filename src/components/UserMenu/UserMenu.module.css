@@ -4,6 +4,18 @@
   gap: 20px;
 }
 
+@media only screen and (min-width: 768px) {
+  .user_menu {
+    
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .user_menu {
+    
+  }
+}
+
 .user_menu h2 {
   white-space: nowrap;
   margin: 0;
@@ -13,3 +25,16 @@
 .user_menu button {
   width: 80px;
 }
+
+/* @media only screen and (min-width: 768px) {
+  . {
+    
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  . {
+    
+  }
+} */
+

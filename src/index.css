@@ -1,7 +1,7 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 100;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -14,12 +14,25 @@
 }
 
 a {
-  font-weight: 500;
+  font-weight: 300;
   color: #490537;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #9e145b;
+}
+
+@media only screen and (min-width: 768px) {
+  .a {
+    font-weight: 400;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .a {
+    font-weight: 500;
+  }
 }
 
 body {
@@ -27,7 +40,7 @@ body {
   display: flex;
   flex-direction: column;
   place-items: center;
-  min-width: 320px;
+  min-width: 340px;
   min-height: 100vh;
   background-color: #e4b8cf;
 }
@@ -65,3 +78,17 @@ button:focus-visible {
     background-color: #9e145b;
   }
 }
+
+/* @media only screen and (min-width: 768px) {
+  . {
+    
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  . {
+    
+  }
+} */
+
+

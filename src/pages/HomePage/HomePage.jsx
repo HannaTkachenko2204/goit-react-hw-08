@@ -3,23 +3,19 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 import { Link } from "react-router-dom";
 import { selectIsLoggedIn } from "../../redux/auth/selectors";
 import css from "./HomePage.module.css";
-import { selectLoading } from "../../redux/contacts/selectors";
 
 export default function HomePage() {
   const isLoggedIn = useSelector(selectIsLoggedIn);
-  const isLoading = useSelector(selectLoading);
-
-  console.log('isLoading:', isLoading);
   return (
     <>
       {isLoggedIn ? (
         <div>
           <PageTitle>
-            Hi, dear! 🌸 This is a place for storing the {" "}
+            Hi, dear! 🌸 This is a place for storing the{" "}
             <Link to="/contacts" className={css.home_page_title_link}>
               contacts
-            </Link>{" "} of your female
-            friends
+            </Link>{" "}
+            of your female friends
           </PageTitle>
           <img
             src="https://celes.club/uploads/posts/2022-06/1654440805_14-celes-club-p-oboi-na-rabochii-stol-pin-ap-krasivie-16.jpg"

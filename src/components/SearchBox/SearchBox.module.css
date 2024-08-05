@@ -1,6 +1,8 @@
 .find_input {
     max-width: 240px;
-    margin: 20px 0;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     padding: 20px;
     background-color: #ead0db;
     border-radius: 8px;
@@ -9,13 +11,14 @@
 
 .find_input h3 {
     margin-top: 0;
+    margin-bottom: 20px;
     text-align: center;
+    color: #490537;
 }
 
 .find_input label {
     width: 100%;
     margin: 0;
-    text-align: center;
     color: #490537;
 }
 

@@ -4,6 +4,7 @@
   align-items: center;
   border-bottom: 2px solid #490537;
   padding-bottom: 10px;
+  width: 260px;
 }
 
 @media only screen and (min-width: 768px) {

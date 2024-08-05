@@ -5,7 +5,7 @@ import { register } from "../../redux/auth/operations";
 import css from "./RegistrationForm.module.css"
 
 const validationSchema = Yup.object().shape({
-  name: Yup.string().trim().required("Name is required"),
+  name: Yup.string().trim().required("Name is required").max(13, "Name cannot be longer than 13 characters"),
   email: Yup.string()
     .trim()
     .required("Email is required")

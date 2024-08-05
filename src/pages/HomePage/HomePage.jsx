@@ -11,11 +11,11 @@ export default function HomePage() {
       {isLoggedIn ? (
         <div>
           <PageTitle>
-            Hi, dear! 🌸 This is a place for storing the{" "}
+            Hi, dear! This is a place for storing the{" "}
             <Link to="/contacts" className={css.home_page_title_link}>
               contacts
             </Link>{" "}
-            of your female friends
+            of your female friends 🎀
           </PageTitle>
           {/* <img
             src="https://celes.club/uploads/posts/2022-06/1654440805_14-celes-club-p-oboi-na-rabochii-stol-pin-ap-krasivie-16.jpg"

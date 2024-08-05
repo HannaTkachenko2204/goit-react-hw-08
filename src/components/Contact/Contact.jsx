@@ -12,11 +12,11 @@ const Contact = ({ name, number, id }) => {
   return (
     <div className={css.item}>
       <div>
-        <p>
+        <p className={css.name}>
           <FaUser className={css.icon} />
           {name}
         </p>
-        <p>
+        <p className={css.number}>
           <MdLocalPhone className={css.icon} />
           {number}
         </p>

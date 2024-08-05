@@ -1,6 +1,7 @@
 .form_container {
-    max-width: 500px;
-    margin: 0 auto;
+    /* max-width: 500px; */
+    max-width: 260px;
+    margin: 0;
     padding: 20px;
     background-color: #ead0db;
     border-radius: 8px;
@@ -27,6 +28,7 @@
     border: 1px solid #e4b8cf;
     border-radius: 4px;
     box-sizing: border-box;
+    text-overflow: ellipsis;
   }
   
   .form_container input:focus {

@@ -19,7 +19,6 @@ export default function ContactsPage() {
 
   return (
     <>
-      {/* <PageTitle>Phonebook</PageTitle> */}
       <div className={css.contact_tools}>
       <ContactForm />
       <SearchBox />

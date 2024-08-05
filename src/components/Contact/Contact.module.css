@@ -1,21 +1,43 @@
 .item{
     display: flex;
-    gap: 20px;
-    align-items: center;
-    width: 240px;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 220px;
     justify-content: space-between;
     background-color: #ead0db;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px;
     color: #490537;
 }
 
+/* @media only screen and (min-width: 768px) {
+  .form_container button {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .user_menu {
+    
+  }
+} */
+
 .icon {
     margin-right: 10px;
-  }
+}
+
+.item p {
+   margin-bottom: 10px;
+}
+
+.name, .number {
+  max-width: 180px;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-word;
+}
 
 .item button {
-    width: 80px;
+    width: 180px;
 }

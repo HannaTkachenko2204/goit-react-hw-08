@@ -5,6 +5,7 @@
   margin: 0;
   padding: 20px;
   color: #9e145b;
+  width: 260px;
 }
 
 @media only screen and (min-width: 768px) {

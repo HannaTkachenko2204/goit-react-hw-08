@@ -13,7 +13,7 @@ const CustomDropdownItem = styled(Dropdown.Item)`
   display: flex;
   justify-content: center;
   &.active {
-    background-color: #9e145b !important;
+    background-color: #490537 !important;
     color: #ffffff !important;
   }
   &:hover {

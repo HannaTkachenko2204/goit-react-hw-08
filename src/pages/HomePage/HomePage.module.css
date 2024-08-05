@@ -1,16 +1,16 @@
 .home_page_img {
-  width: 300px;
+  width: 260px;
 }
 
 @media only screen and (min-width: 768px) {
   .home_page_img {
-    width: 400px;
+    width: 360px;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   .home_page_img {
-    width: 600px;
+    width: 560px;
   }
 }
 
@@ -21,7 +21,7 @@
 
 .cloud_text {
   position: absolute;
-  top: 265px;
+  top: 250px;
   left: -25px;
   color: rgb(169, 169, 26);
   font-size: 35px;
@@ -34,7 +34,7 @@
 
 @media only screen and (min-width: 768px) {
   .cloud_text {
-    top: 350px;
+    top: 335px;
     left: -45px;
     font-size: 50px;
   }
@@ -42,7 +42,7 @@
 
 @media only screen and (min-width: 1440px) {
   .cloud_text {
-    top: 580px;
+    top: 570px;
     left: -50px;
     font-size: 70px;
   }
@@ -50,7 +50,7 @@
 
 .cloud_img {
   position: absolute;
-  top: 250px;
+  top: 240px;
   left: -95px;
   width: 280px;
   transform: rotate(-15deg);
@@ -60,7 +60,7 @@
 
 @media only screen and (min-width: 768px) {
   .cloud_img {
-    top: 330px;
+    top: 315px;
     left: -150px;
     width: 400px;
   }
@@ -68,7 +68,7 @@
 
 @media only screen and (min-width: 1440px) {
   .cloud_img {
-    top: 550px;
+    top: 540px;
     left: -220px;
     width: 600px;
   }

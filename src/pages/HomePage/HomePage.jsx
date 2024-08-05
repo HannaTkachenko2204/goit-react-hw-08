@@ -17,11 +17,11 @@ export default function HomePage() {
             </Link>{" "}
             of your female friends
           </PageTitle>
-          <img
+          {/* <img
             src="https://celes.club/uploads/posts/2022-06/1654440805_14-celes-club-p-oboi-na-rabochii-stol-pin-ap-krasivie-16.jpg"
             alt="Girl with phone"
             className={css.home_page_img}
-          />
+          /> */}
         </div>
       ) : (
         <>

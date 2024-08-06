@@ -27,6 +27,13 @@ input {
   color: #490537;
 }
 
+@media only screen and (min-width: 768px) {
+  .find_input h3 {
+    font-size: 1.6em;
+    line-height: 1.2;
+  }
+}
+
 .find_input label {
   width: 100%;
   margin: 0;

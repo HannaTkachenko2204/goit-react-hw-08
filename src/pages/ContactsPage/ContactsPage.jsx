@@ -20,8 +20,8 @@ export default function ContactsPage() {
   return (
     <>
       <div className={css.contact_tools}>
-      <ContactForm />
-      <SearchBox />
+        <ContactForm />
+        <SearchBox />
       </div>
       {isLoading && <Loader />}
       <ContactList />

@@ -66,11 +66,25 @@ const Navigation = () => {
             </Dropdown.Menu>
           </Dropdown>
         ) : (
-          <div className={css.nav_flex} >
-            <NavLink to="/" className={({ isActive }) => (isActive ? `${css.nav_link} ${css.active}` : css.nav_link)} >
+          <div className={css.nav_flex}>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? `${css.nav_link} ${css.active}` : css.nav_link
+              }
+            >
               <span>Home</span>
-            </NavLink >
-            {isLoggedIn && <NavLink to="/contacts" className={({ isActive }) => (isActive ? `${css.nav_link} ${css.active}` : css.nav_link)} >Contacts</NavLink>}
+            </NavLink>
+            {isLoggedIn && (
+              <NavLink
+                to="/contacts"
+                className={({ isActive }) =>
+                  isActive ? `${css.nav_link} ${css.active}` : css.nav_link
+                }
+              >
+                Contacts
+              </NavLink>
+            )}
           </div>
         )}
       </div>

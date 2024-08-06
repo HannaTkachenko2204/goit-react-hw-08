@@ -2,10 +2,13 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useDispatch } from "react-redux";
 import * as Yup from "yup";
 import { register } from "../../redux/auth/operations";
-import css from "./RegistrationForm.module.css"
+import css from "./RegistrationForm.module.css";
 
 const validationSchema = Yup.object().shape({
-  name: Yup.string().trim().required("Name is required").max(13, "Name cannot be longer than 13 characters"),
+  name: Yup.string()
+    .trim()
+    .required("Name is required")
+    .max(13, "Name cannot be longer than 13 characters"),
   email: Yup.string()
     .trim()
     .required("Email is required")
@@ -63,7 +66,11 @@ function RegistrationForm() {
             placeholder="Enter your password"
             autoComplete="off"
           />
-          <ErrorMessage name="password" component="span" className={css.error} />
+          <ErrorMessage
+            name="password"
+            component="span"
+            className={css.error}
+          />
         </label>
         <button type="submit">Register</button>
       </Form>

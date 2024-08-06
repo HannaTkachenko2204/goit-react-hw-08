@@ -12,7 +12,7 @@ const validationShema = Yup.object().shape({
     .required("Field must be filled in"),
   number: Yup.string()
     .matches(
-     /^[\d\-()]+$/,
+      /^[\d\-()]+$/,
       "Phone must be contain only numbers, dashes, and parentheses"
     )
     .required("Field must be filled in"),
@@ -33,14 +33,15 @@ const ContactForm = () => {
       validationSchema={validationShema}
     >
       <Form className={css.form_container}>
-        <label>Name
-        <Field type="text" name="name" />
-        <ErrorMessage name="name" component="span" className={css.error} />
+        <label>
+          Name
+          <Field type="text" name="name" />
+          <ErrorMessage name="name" component="span" className={css.error} />
         </label>
         <label>
-        Number
-        <Field type="text" name="number" />
-        <ErrorMessage name="number" component="span" className={css.error} />
+          Number
+          <Field type="text" name="number" />
+          <ErrorMessage name="number" component="span" className={css.error} />
         </label>
         <button type="submit" className={css.formButton}>
           Add contact

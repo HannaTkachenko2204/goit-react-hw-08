@@ -7,7 +7,18 @@
   margin: 0;
   margin-top: 20px;
   width: 260px;
+}
 
+@media only screen and (min-width: 768px) {
+  .list {
+    width: 360px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .list {
+    width: 560px;
+  }
 }
 
 .list > li {

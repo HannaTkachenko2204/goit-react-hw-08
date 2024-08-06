@@ -9,6 +9,18 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+@media only screen and (min-width: 768px) {
+    .find_input {
+      max-width: 340px;
+    }
+  }
+  
+  @media only screen and (min-width: 1440px) {
+    .find_input {
+      max-width: 540px;
+    }
+  }
+
 .find_input h3 {
     margin-top: 0;
     margin-bottom: 20px;

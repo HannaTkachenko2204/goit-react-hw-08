@@ -26,7 +26,7 @@ export default function HomePage() {
       ) : (
         <>
           <div className={css.cloud_container}>
-            <div className={css.cloud_text}>Girls only!</div>
+            <div className={`${css.cloud_text} ${css['grey-qo-regular']}`}>Girls only!</div>
             <img
               src="https://dabbar.ru/files/img/pics/kartinka-oblako-na-prozrachnom-fone/kartinka-oblako-na-prozrachnom-fone-8.webp"
               alt="Cloud"

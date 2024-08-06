@@ -16,8 +16,7 @@ const CustomDropdownItem = styled(Dropdown.Item)`
     color: #490537 !important;
   }
   &:hover {
-    background-color: #490537 !important;
-    color: #ffffff !important;
+    color: #490537 !important;
   }
 `;
 

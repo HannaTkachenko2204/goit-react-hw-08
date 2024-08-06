@@ -9,15 +9,14 @@ import css from "./Navigation.module.css";
 import styled from "styled-components";
 
 const CustomDropdownItem = styled(Dropdown.Item)`
-  color: #490537 !important;
+  color: #9e145b !important;
   display: flex;
   justify-content: center;
   &.active {
-    background-color: #490537 !important;
-    color: #ffffff !important;
+    color: #490537 !important;
   }
   &:hover {
-    background-color: #9e145b !important;
+    background-color: #490537 !important;
     color: #ffffff !important;
   }
 `;

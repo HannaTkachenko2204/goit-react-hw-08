@@ -1,50 +1,49 @@
 .find_input {
-    max-width: 240px;
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 20px;
-    background-color: #ead0db;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 240px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 20px;
+  background-color: #ead0db;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  text-overflow: ellipsis;
 }
 
 @media only screen and (min-width: 768px) {
-    .find_input {
-      max-width: 340px;
-    }
+  .find_input {
+    margin-left: 0;
+    margin-right: 20px;   
   }
-  
-  @media only screen and (min-width: 1440px) {
-    .find_input {
-      max-width: 540px;
-    }
-  }
+}
 
 .find_input h3 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #490537;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #490537;
 }
 
 .find_input label {
-    width: 100%;
-    margin: 0;
-    color: #490537;
+  width: 100%;
+  margin: 0;
+  color: #490537;
 }
 
 .find_input input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #e4b8cf;
-    border-radius: 4px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #e4b8cf;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .find_input input:focus {
-    border-color: #9e145b;
-    outline: none;
-    box-shadow: 0 0 5px #9e145b;
-  }
+  border-color: #9e145b;
+  outline: none;
+  box-shadow: 0 0 5px #9e145b;
+}

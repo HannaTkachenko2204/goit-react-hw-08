@@ -7,3 +7,7 @@
 .nav a:last-child {
   margin-right: 0;
 }
+
+.nav_link {
+  font-size: 1.3em;
+}

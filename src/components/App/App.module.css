@@ -1,20 +1,20 @@
 .page_container {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    min-height: 50vh;
-    padding: 20px;
-    overflow: visible;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  min-height: 50vh;
+  padding: 20px;
+  overflow: visible;
 }
 
 @media only screen and (min-width: 768px) {
-    .page_container {
-        width: 400px;
-    }
+  .page_container {
+    width: 400px;
   }
-  
-  @media only screen and (min-width: 1440px) {
-    .page_container {
-        width: 600px;
-    }
+}
+
+@media only screen and (min-width: 1025px) {
+  .page_container {
+    width: 600px;
   }
+}

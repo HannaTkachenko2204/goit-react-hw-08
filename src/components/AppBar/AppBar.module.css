@@ -10,13 +10,8 @@
 @media only screen and (min-width: 768px) {
   .header {
     padding-bottom: 10px;
-    width: 360px;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  .header {
-    padding-bottom: 20px;
     width: 560px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }

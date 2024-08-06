@@ -4,12 +4,6 @@
 
 @media only screen and (min-width: 768px) {
   .home_page_img {
-    width: 360px;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  .home_page_img {
     width: 560px;
   }
 }
@@ -34,15 +28,7 @@
 
 @media only screen and (min-width: 768px) {
   .cloud_text {
-    top: 335px;
-    left: -45px;
-    font-size: 50px;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  .cloud_text {
-    top: 570px;
+    top: 460px;
     left: -50px;
     font-size: 70px;
   }
@@ -60,15 +46,7 @@
 
 @media only screen and (min-width: 768px) {
   .cloud_img {
-    top: 315px;
-    left: -150px;
-    width: 400px;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  .cloud_img {
-    top: 540px;
+    top: 430px;
     left: -220px;
     width: 600px;
   }

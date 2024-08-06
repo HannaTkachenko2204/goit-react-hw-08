@@ -4,25 +4,16 @@
   gap: 10px;
   align-items: center;
   /* overflow: hidden;
-  white-space: normal;
-  word-break: break-word; */
-  overflow: hidden;
   text-overflow: ellipsis;
-  white-space: normal;
+  white-space: normal; */
   width: 200px;
 }
 
-/* @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .user_menu {
-    
+    gap: 20px;
   }
 }
-
-@media only screen and (min-width: 1440px) {
-  .user_menu {
-    
-  }
-} */
 
 .user_menu h2 {
   display: flex;
@@ -36,19 +27,12 @@
   font-style: italic;
 }
 
+@media only screen and (min-width: 768px) {
+  .user_menu h2 {
+    display: block;
+  }
+}
+
 .user_menu button {
   width: 80px;
 }
-
-/* @media only screen and (min-width: 768px) {
-  . {
-    
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  . {
-    
-  }
-} */
-

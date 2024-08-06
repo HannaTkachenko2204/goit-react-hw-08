@@ -24,3 +24,16 @@
   border-radius: 4px !important;
   box-shadow: 0 0 5px #9e145b !important;
 }
+
+.nav_flex {
+  display: flex;
+  gap: 20px;
+}
+
+.nav_link {
+  font-size: 1.3em;
+}
+
+.active {
+  color: #490537;
+}

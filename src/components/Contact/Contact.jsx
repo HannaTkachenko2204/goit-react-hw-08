@@ -2,15 +2,47 @@ import css from "./Contact.module.css";
 import { FaUser } from "react-icons/fa";
 import { MdLocalPhone } from "react-icons/md";
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contacts/operations";
+import { deleteContact, updateContact } from "../../redux/contacts/operations";
+import { useState } from "react";
 
 const Contact = ({ name, number, id }) => {
   const dispatch = useDispatch();
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedName, setEditedName] = useState(name);
+  const [editedNumber, setEditedNumber] = useState(number);
 
   const handleClickDelete = () => dispatch(deleteContact(id));
+  const handleClickEdit = () => setIsEditing(true);
+  const handleSave = () => {
+    dispatch(updateContact({ contactId: id, updatedContact: { name: editedName, number: editedNumber }}));
+    setIsEditing(false);
+  };
+
+  console.log("Rendering Contact:", { id, editedName, editedNumber });
 
   return (
     <div className={css.item}>
+      {isEditing ? (
+        <div>
+          <p className={css.name}>
+            <FaUser className={css.icon} />
+            <input
+              type="text"
+              value={editedName}
+              onChange={(e) => setEditedName(e.target.value)}
+            />
+          </p>
+          <p className={css.number}>
+            <MdLocalPhone className={css.icon} />
+            <input
+              type="text"
+              value={editedNumber}
+              onChange={(e) => setEditedNumber(e.target.value)}
+            />
+          </p>
+          <button onClick={handleSave}>Save</button>
+        </div>
+      ) : (
       <div>
         <p className={css.name}>
           <FaUser className={css.icon} />
@@ -20,8 +52,10 @@ const Contact = ({ name, number, id }) => {
           <MdLocalPhone className={css.icon} />
           {number}
         </p>
-      </div>
+      <button onClick={handleClickEdit}>Edit</button>
       <button onClick={handleClickDelete}>Delete</button>
+      </div>
+      )}
     </div>
   );
 };

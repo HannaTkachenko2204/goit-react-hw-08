@@ -13,6 +13,8 @@ const ContactList = () => {
   const isLoading = useSelector(selectLoading);
   const error = useSelector(selectError);
 
+  console.log("Filtered Contacts:", contacts);
+
   return (
     <ul className={css.list}>
       {isLoading && !error && <Loader />}

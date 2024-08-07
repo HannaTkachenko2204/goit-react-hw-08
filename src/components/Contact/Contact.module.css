@@ -65,7 +65,7 @@
   margin-top: 10px;
 }
 
-.btn_edit:not(:hover) {
+/* .btn_edit:not(:hover) {
   background-color: #9e145b;
 }
 
@@ -79,6 +79,17 @@
 
 .btn_save:hover {
   background-color: #490537;
+} */
+
+/* .btn_edit,
+.btn_save {
+  background-color: #9e145b;
+  transition: background-color 0.3s;
 }
+
+.btn_edit:hover,
+.btn_save:hover {
+  background-color: #490537;
+} */
 
 

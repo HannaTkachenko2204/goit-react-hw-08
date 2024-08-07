@@ -18,8 +18,6 @@ const Contact = ({ name, number, id }) => {
     setIsEditing(false);
   };
 
-  console.log("Rendering Contact:", { id, editedName, editedNumber });
-
   return (
     <div className={css.item}>
       {isEditing ? (

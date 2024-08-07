@@ -40,7 +40,7 @@ const Contact = ({ name, number, id }) => {
               onChange={(e) => setEditedNumber(e.target.value)}
             />
           </p>
-          <button onClick={handleSave}>Save</button>
+          <button onClick={handleSave} className={css.btn_save} >Save</button>
         </div>
       ) : (
       <div>
@@ -52,8 +52,8 @@ const Contact = ({ name, number, id }) => {
           <MdLocalPhone className={css.icon} />
           {number}
         </p>
-      <button onClick={handleClickEdit}>Edit</button>
-      <button onClick={handleClickDelete}>Delete</button>
+      <button onClick={handleClickEdit} className={css.btn_edit} >Edit</button>
+      <button onClick={handleClickDelete} className={css.btn_delete} >Delete</button>
       </div>
       )}
     </div>

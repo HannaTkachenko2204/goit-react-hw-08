@@ -25,6 +25,8 @@ const Contact = ({ name, number, id }) => {
           <p className={css.name}>
             <FaUser className={css.icon} />
             <input
+              id="name"
+              name="name"
               type="text"
               value={editedName}
               onChange={(e) => setEditedName(e.target.value)}
@@ -33,6 +35,8 @@ const Contact = ({ name, number, id }) => {
           <p className={css.number}>
             <MdLocalPhone className={css.icon} />
             <input
+              id="number"
+              name="number"
               type="text"
               value={editedNumber}
               onChange={(e) => setEditedNumber(e.target.value)}

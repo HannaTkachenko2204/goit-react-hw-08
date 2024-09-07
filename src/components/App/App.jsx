@@ -31,7 +31,7 @@ function App() {
   ) : (
     <div className={css.page_container}>
       <Layout>
-        <Suspense fallback={null}>
+        <Suspense fallback={<Loader />}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route

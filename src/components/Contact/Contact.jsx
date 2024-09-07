@@ -30,6 +30,7 @@ const Contact = ({ name, number, id }) => {
               type="text"
               value={editedName}
               onChange={(e) => setEditedName(e.target.value)}
+              autoComplete="name"
             />
           </p>
           <p className={css.number}>
@@ -40,6 +41,7 @@ const Contact = ({ name, number, id }) => {
               type="text"
               value={editedNumber}
               onChange={(e) => setEditedNumber(e.target.value)}
+              autoComplete="tel"
             />
           </p>
           <button onClick={handleSave} className={css.btn_save} >Save</button>

@@ -35,12 +35,12 @@ const ContactForm = () => {
       <Form className={css.form_container}>
         <label>
           Name
-          <Field type="text" name="name" />
+          <Field type="text" name="name" id="name" autoComplete="name" />
           <ErrorMessage name="name" component="span" className={css.error} />
         </label>
         <label>
           Number
-          <Field type="text" name="number" />
+          <Field type="text" name="number" id="number" autoComplete="tel" />
           <ErrorMessage name="number" component="span" className={css.error} />
         </label>
         <button type="submit" className={css.formButton}>

@@ -71,14 +71,7 @@
   margin-top: 10px;
 }
 
-/* .btn_edit:not(:hover),
+.btn_edit:not(:hover),
 .btn_save:not(:hover) {
-  background-color: #9e145b;
-} */
-
-.btn_edit:focus,
-.btn_edit:active,
-.btn_save:focus,
-.btn_save:active {
   background-color: #9e145b;
 }
